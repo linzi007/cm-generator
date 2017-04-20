@@ -1,0 +1,2 @@
+重写l5-repository包中的模板
+	在repository.php中的最后一行配置的路径

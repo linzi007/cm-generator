@@ -12,6 +12,9 @@
         "infyomlabs/adminlte-templates": "5.3.x-dev",
         "infyomlabs/laravel-generator": "5.3.x-dev",
         "infyomlabs/swagger-generator": "dev-master",
+        "intervention/image": "^2.3",
+        "jlapp/swaggervel": "dev-master",
+        "laravelcollective/html": "^5.3.0",
         "league/fractal": "^0.15.0",
         "predis/predis": "^1.1",
         "yajra/laravel-datatables-oracle": "~6.0",
@@ -31,7 +34,10 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "app/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -51,6 +57,9 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan clear-compiled",
+            "php artisan ide-helper:generate",
+            "php artisan ide-helper:meta",
             "php artisan optimize"
         ]
     },

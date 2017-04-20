@@ -1,0 +1,53 @@
+[
+  {
+    "name": "id",
+    "title": "区域Id",
+    "dbType": "increments",
+    "fillable": false,
+    "primary": true
+  },
+  {
+    "name": "code",
+    "title": "区域编码",
+    "validations": "required",
+    "dbType": "string",
+    "htmlType": "text",
+    "searchable": true
+  },
+  {
+    "name": "name",
+    "title": "区域名称",
+    "validations": "required:max,10",
+    "dbType": "string",
+    "htmlType": "text",
+    "searchable": true
+  },
+  {
+    "name": "parent_code",
+    "title": "上级编码",
+    "validations": "required",
+    "dbType": "string",
+    "htmlType": "text",
+    "searchable": false
+  },
+  {
+    "name": "deep",
+    "title": "层级",
+    "description": "地区深度，从1开始",
+    "validations": "required",
+    "dbType": "smallInteger:default,1",
+    "htmlType": "number",
+    "searchable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "weight",
+    "title": "排序",
+    "description": "越小排越前",
+    "validations": "required",
+    "dbType": "smallInteger:default,1",
+    "htmlType": "number",
+    "searchable": false
+  }
+]
